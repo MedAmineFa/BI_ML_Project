@@ -1,0 +1,32 @@
+.analysis-budget {
+    text-align: center;
+}
+
+.analysis-budget .title {
+    font-family: "Arial", sans-serif; /* Utilisation d'une police sans empattement pour une apparence plus propre */
+    font-size: 36px; /* Augmentation de la taille de la police pour un titre plus imposant */
+    color: #333; /* Utilisation d'une teinte légèrement plus sombre pour une meilleure lisibilité */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Mise en majuscules du texte pour un aspect plus formel */
+}
+
+.analysis-budget .iframe-container {
+    border: 2px solid #3399CC; /* Couleur du cadre */
+    border-radius: 5px;
+    overflow: hidden; /* Empêcher les bords de l'iframe de dépasser */
+}
+
+.analysis-budget .button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+.analysis-budget .button:hover {
+    background-color: #45a049;
+}

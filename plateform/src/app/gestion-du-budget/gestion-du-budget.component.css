@@ -1,0 +1,31 @@
+.gestion-du-budget {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+}
+
+.gestion-du-budget p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.gestion-du-budget button {
+    background-color: #3399CC;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.gestion-du-budget button:hover {
+    background-color: #1e6ebf;
+}

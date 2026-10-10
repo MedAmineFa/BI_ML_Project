@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Prédiction de l'Engagement pour l'année 2024</h1>
+  <p>Nous avons mis en place trois modèles de prédiction pour estimer l'engagement de notre entreprise en 2024 : la régression linéaire multiple, la régression polynomiale et la forêt aléatoire. Après avoir calculé le coefficient de détermination (R²) de chaque modèle, nous avons sélectionné le modèle avec le R² le plus élevé, garantissant ainsi la meilleure précision pour nos prévisions.</p>
+  <button (click)="predictFuture()">Prédire l'avenir</button>
+  <div class="result" *ngIf="futurePrediction !== undefined">
+    <p>Estimation de l'engagement total pour l'année 2024 (en DT) : <strong>{{ futurePrediction | number:'1.2-2' }} Millions</strong></p> 
+    <br><br>
+    <p>Le graphique ci-dessous illustre l'évolution de l'engagement de notre entreprise au fil des ans, avec une projection pour 2024 basée sur notre modèle de prédiction le plus précis. Cette visualisation permet de mieux comprendre les tendances passées et d'anticiper notre croissance future :</p>
+    <img src="assets/Prediction.png" alt="Prediction Image">
+  </div>
+  <div class="error" *ngIf="predictionError">
+    <p>{{ predictionError }}</p>
+  </div>
+</div>

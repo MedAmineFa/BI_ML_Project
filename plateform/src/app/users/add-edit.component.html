@@ -1,0 +1,59 @@
+﻿<h1>{{title}}</h1>
+<form *ngIf="!loading" [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="row">
+        <div class="mb-3 col">
+            <label class="form-label">Prénom</label>
+            <input type="text" formControlName="firstName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.firstName.errors }" style="border-radius: 5px;" />
+            <div *ngIf="submitted && f.firstName.errors" class="invalid-feedback" style="color: #DC3545;">
+                <div *ngIf="f.firstName.errors.required">Le prénom est requis</div>
+            </div>
+        </div>
+        <div class="mb-3 col">
+            <label class="form-label">Nom de famille</label>
+            <input type="text" formControlName="lastName" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.lastName.errors }" style="border-radius: 5px;" />
+            <div *ngIf="submitted && f.lastName.errors" class="invalid-feedback" style="color: #DC3545;">
+                <div *ngIf="f.lastName.errors.required">Le nom de famille est requis</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="mb-3 col">
+            <label class="form-label">Nom d'utilisateur</label>
+            <input type="text" formControlName="username" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" style="border-radius: 5px;" />
+            <div *ngIf="submitted && f.username.errors" class="invalid-feedback" style="color: #DC3545;">
+                <div *ngIf="f.username.errors.required">Le nom d'utilisateur est requis</div>
+            </div>
+        </div>
+        <div class="mb-3 col">
+            <label class="form-label">
+                Mot de passe
+                <em *ngIf="id">(Laissez vide pour conserver le même mot de passe)</em>
+            </label>
+            <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" style="border-radius: 5px;" />
+            <div *ngIf="submitted && f.password.errors" class="invalid-feedback" style="color: #DC3545;">
+                <div *ngIf="f.password.errors.required">Le mot de passe est requis</div>
+                <div *ngIf="f.password.errors.minlength">Le mot de passe doit comporter au moins 6 caractères</div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="mb-3 col">
+            <label class="form-label">Email</label>
+            <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" style="border-radius: 5px;" />
+            <div *ngIf="submitted && f.email.errors" class="invalid-feedback" style="color: #DC3545;">
+                <div *ngIf="f.email.errors.required">Email est requis</div>
+                <div *ngIf="f.email.errors.email">Email doit être une adresse email valide</div>
+            </div>
+        </div>
+    </div>
+    <div class="mb-3">
+        <button [disabled]="submitting" class="btn btn-primary" style="border-radius: 5px; background-color: #3399CC;">
+            <span *ngIf="submitting" class="spinner-border spinner-border-sm me-1 "></span>
+            Enregistrer
+        </button>
+        <a routerLink="/users" class="btn btn-link" style="color: #3399CC; border-radius: 5px;">Annuler</a>
+    </div>
+</form>
+<div *ngIf="loading" class="text-center m-5">
+    <span class="spinner-border spinner-border-lg align-center"></span>
+</div>

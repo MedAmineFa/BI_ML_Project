@@ -1,0 +1,52 @@
+.gestion-des-achats {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    text-align: center;
+}
+
+.gestion-des-achats iframe {
+    margin-top: 100px; /* Espace supplémentaire au-dessus de l'iframe */
+    overflow-y: auto; /* Activation du défilement vertical si le contenu dépasse la taille de l'iframe */
+}
+
+.gestion-des-achats p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.gestion-des-achats button {
+    background-color: #3399CC;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.gestion-des-achats button:hover {
+    background-color: #1e6ebf;
+}
+
+
+.gestion-des-achats iframe:nth-of-type(1) {
+    border: 1px solid #ddd; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin-bottom: 20px; /* Marge en bas */
+}
+
+
+.gestion-des-achats iframe:nth-of-type(2) {
+    border: 1px solid #ddd; /* Bordure grise */
+    border-radius: 5px; /* Coins arrondis */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); /* Ombre légère */
+    margin-bottom: 20px; /* Marge en bas */
+}

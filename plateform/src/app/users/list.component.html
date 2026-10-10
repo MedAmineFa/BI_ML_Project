@@ -1,0 +1,41 @@
+﻿<h1>Utilisateurs</h1>
+<a routerLink="add" class="btn btn-sm btn-success mb-2" style="border-radius: 5px; background-color: #4CAF50;">Ajouter un utilisateur</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th style="width: 25%">Email</th>
+            <th style="width: 25%">Nom d'utilisateur</th>
+            <th style="width: 25%">Rôle</th>
+            <th style="width: 25%"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users" [ngClass]="{'first-row': user.id === 1}">
+            <td>{{ user.email }}</td>
+            <td>{{ user.username }}</td>
+            <td>{{ user.role }}</td>           
+            <td style="white-space: nowrap" class="d-flex align-items-center justify-content-center">
+                <div *ngIf="user.id === 1" style="color: red;">
+                    &nbsp;
+                </div>
+                <div *ngIf="user.id !== 1">
+                    <button (click)="toggleActivation(user)" class="btn btn-sm" [ngClass]="{ 'btn-danger': user.activation === 1, 'btn-success': user.activation === 0 }">{{ user.activation === 1 ? 'Désactiver' : 'Activer' }}</button>
+                </div>                
+                <div class="ms-3" *ngIf="user.id !== 1">
+                    <a routerLink="edit/{{ user.id }}" class="btn btn-sm btn-primary me-1" style="border-radius: 5px; background-color: #3399CC;">Modifier</a>
+                </div>
+                <div class="ms-3" *ngIf="user.id !== 1">
+                    <button (click)="deleteUser(user.id)" class="btn btn-sm btn-danger btn-delete-user" [disabled]="user.isDeleting" style="border-radius: 5px;">
+                        <span *ngIf="user.isDeleting" class="spinner-border spinner-border-sm"></span>
+                        <span *ngIf="!user.isDeleting">Effacer</span>
+                    </button>
+                </div>
+            </td>
+        </tr>
+        <tr *ngIf="!users">
+            <td colspan="4" class="text-center">
+                <span class="spinner-border spinner-border-lg align-center"></span>
+            </td>
+        </tr>
+    </tbody>
+</table>

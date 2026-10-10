@@ -1,0 +1,32 @@
+.facture-dachat {
+    text-align: center;
+}
+
+.facture-dachat .title {
+    font-family: "Arial", sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.facture-dachat .iframe-container {
+    border: 2px solid #3399CC;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.facture-dachat .button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+.facture-dachat .button:hover {
+    background-color: #45a049;
+}

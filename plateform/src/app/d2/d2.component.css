@@ -1,0 +1,32 @@
+.analysis-engagements {
+    text-align: center;
+}
+
+.analysis-engagements .title {
+    font-family: "Arial", sans-serif;
+    font-size: 36px;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.analysis-engagements .iframe-container {
+    border: 2px solid #3399CC;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.analysis-engagements .button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 18px;
+}
+
+.analysis-engagements .button:hover {
+    background-color: #45a049;
+}
